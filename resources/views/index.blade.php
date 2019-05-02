@@ -9,6 +9,7 @@
 				<th>Travel Events</th>
 				<th>Destination</th>
 				<th>Posted By</th>
+				<th>ID</th>
 			</tr>
 			@foreach($posts as $post)
 		      <tr>
@@ -20,6 +21,9 @@
 		        </td>
 		        <td>
 		        	{{$post->UserName}}
+		        </td>
+		        <td>
+		        	{{$post->UserID}}
 		        </td>
 		      </tr>
 		    @endforeach

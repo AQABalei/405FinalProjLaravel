@@ -8,7 +8,7 @@ use DB;
 class IndexController extends Controller
 {
     public function index(){
-    	$query1 = DB::table('posts')->select('posts.id AS PostId', 'posts.title AS PostTitle', 'posts.destination AS PostDest', 'users.username AS UserName');
+    	$query1 = DB::table('posts')->select('posts.id AS PostId', 'posts.title AS PostTitle', 'posts.destination AS PostDest', 'users.username AS UserName', 'users.id AS UserID');
     	$query2 = $query1->join('users', 'posts.userid', '=', 'users.id');
     	$posts = $query2->get();
     	return view('index', [
